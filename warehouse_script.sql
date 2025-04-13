@@ -170,4 +170,40 @@ DROP TABLE City;
 
 UNDROP TABLE City;
 
---- 
+--- added more table types code..
+
+-- databases
+USE ROLE SYSADMIN;
+
+CREATE DATABASE our_first_database;
+
+SHOW DATABASES LIKE 'our_first_database';  --retention_time is set to 1 by default
+
+CREATE DATABASE production_database 
+DATA_RETENTION_TIME_IN_DAYS = 15
+COMMENT = 'Critical production database';
+
+use DATABASE production_database 
+
+CREATE TABLE TEST_TBL (NAME VARCHAR(100)) 
+
+show tables
+
+CREATE TABLE TEST_TBL2 (NAME VARCHAR(100)) DATA_RETENTION_TIME_IN_DAYS = 5
+
+
+
+show tables;
+ALTER TABLE TEST_TBL SET DATA_RETENTION_TIME_IN_DAYS = 90;
+
+
+CREATE TABLE TEST_TBL2 (NAME VARCHAR(100));
+
+use database our_first_database
+
+CREATE TABLE TEST_FIRST_TBL (NAME VARCHAR(100))
+
+Account => 1 day
+DATABASE RETENTION TIME =15 days   -- 20 tables
+SChema  RETENTION TIME =7 days
+table RETENTION TIME =3 days   
