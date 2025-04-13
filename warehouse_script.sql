@@ -55,10 +55,11 @@ select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF100.CUSTOMER; -- XS - L -- in progres
 select * from "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF100"."ORDERS";   -- L  -- changed warehouse 
 select * from "SNOWFLAKE_SAMPLE_DATA"."TPCDS_SF10TCL"."CALL_CENTER"; --L
 
+-- made changes to code
 
 
 -- daily 9 AM 
---compute power -- 100 users -
+--compute power -- 100 users
 9.02 - 200 queries -- waiting queue 
 
 Max clusters=10
