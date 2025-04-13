@@ -70,3 +70,104 @@ min clusters=1
 3rd cluseter
 
 9.07 -- 100
+
+-- time travel practive ... 
+create database TimeTravelPractise;
+show databases;
+ALTER DATABASE TimeTravelPractise set DATA_RETENTION_TIME_IN_DAYS=90;
+
+show databases like '%TimeTravelPractise%';
+
+use database timetravelpractise
+
+show tables
+
+select * from city
+
+use database TimeTravelPractise;
+CREATE TABLE City( CityID INT AUTOINCREMENT PRIMARY KEY,
+ Name String(50), Zip String(10), StateCode String(2));
+ 
+show tables
+
+select * from City
+select current_timestamp();  --2024-01-08 18:09:49.500 -0800
+
+select sysdate() -- utc time
+
+select * from City
+
+INSERT INTO City(Name, Zip, StateCode) Values ('Sunnyvale', '94087', 'CA'),
+('Cupertino', '95687', 'CA'),
+('MountainView', '94017', 'CA'),
+('Santa Clara', '95054', 'CA');
+
+select * from City;    1 day
+
+SELECT * FROM city AT(timestamp => '2024-01-08 18:09:49.500 -0800'::timestamp_tz);
+
+INSERT INTO CITY
+SELECT * FROM city AT(timestamp => '2024-01-08 18:16:59.929 -0800'::timestamp_tz) WHERE CITYID=1;
+
+SELECT * FROM city AT(timestamp => '2024-01-08 18:20:39.987 -0800'::timestamp_tz);
+
+
+drop table city; 8 AM  -- 1 day
+ tomorrow -- 8 AM
+
+undrop table city 
+
+
+SELECT * FROM city
+
+
+delete from city where cityid=1
+
+select current_timestamp();  --2024-01-08 18:16:59.929 -0800  -- 4 rows
+
+select current_timestamp();   -- 2024-01-08 18:20:39.987 -0800  -- 5 rows
+
+
+show tables
+
+1 day
+
+INSERT INTO CITY 
+SELECT * FROM city 
+AT(timestamp => '2023-11-05 18:56:06.987 -0800'::timestamp_tz);
+
+show tebles
+
+select current_timestamp;   --2023-09-03 19:14:15.183 -0700
+
+INSERT INTO City(Name, Zip, StateCode) Values ('Bozman', '28732', 'MA');
+
+SELECT * FROM city 
+
+SELECT * FROM city 
+AT(timestamp => '2023-09-03 19:14:15.183 -0700'::timestamp_tz);
+
+select current_timestamp;  --2023-09-03 19:15:59.327 -0700
+
+delete from city where cityid=1
+
+select * from city before(offset=> -60*60*24) --as 1 day
+
+1 day
+
+9 AM you dropped   tomorrow 9 AM => 
+
+SELECT * FROM city 
+AT(timestamp => '2023-09-03 19:15:59.327 -0700'::timestamp_tz);
+
+SELECT * FROM city BEFORE(statement =>'01b02394-3200-ece1-0006-d15a0001d062')
+
+select * from city before (statement =>'01b0290a-3200-ecf2-0006-d15a0001e02e') where cityid=1; 
+
+select * from City;
+
+DROP TABLE City;
+
+UNDROP TABLE City;
+
+--- 
