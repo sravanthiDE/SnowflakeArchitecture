@@ -4,9 +4,9 @@ select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.NATION limit 1000; -- 8.03 AM  -- 
 -- added more code changes
 -- aded new code may 6th 2025
 
--- added another date field.. use WH
+-- added another date field.. use 
 
-create table SV1 (id int )
+create table SV1 (id int , name varchar(50))
 
 select getdate()
 
