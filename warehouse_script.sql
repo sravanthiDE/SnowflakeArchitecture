@@ -2,6 +2,9 @@ select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.CUSTOMER limit 100;  8 AM  -- 2 mi
 
 select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.NATION limit 1000; -- 8.03 AM  -- 8.04 AM  -- 8.05 AM
 -- added more code changes
+-- aded new code may 6th 2025
+
+select getdate()
 
 ALTER WAREHOUSE REPORTING_WH RESUME   -- 8 AM
 ALTER WAREHOUSE REPORTING_WH SUSPEND  -- 70 seconds   -- 70 seconds 
