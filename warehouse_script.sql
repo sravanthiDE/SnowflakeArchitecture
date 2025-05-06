@@ -6,6 +6,8 @@ select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.NATION limit 1000; -- 8.03 AM  -- 
 
 -- added another date field.. use WH
 
+create table SV1 (id int )
+
 select getdate()
 
 ALTER WAREHOUSE REPORTING_WH RESUME   -- 8 AM
