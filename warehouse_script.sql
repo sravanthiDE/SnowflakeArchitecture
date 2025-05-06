@@ -4,6 +4,8 @@ select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF10.NATION limit 1000; -- 8.03 AM  -- 
 -- added more code changes
 -- aded new code may 6th 2025
 
+-- added another date field.. use WH
+
 select getdate()
 
 ALTER WAREHOUSE REPORTING_WH RESUME   -- 8 AM
